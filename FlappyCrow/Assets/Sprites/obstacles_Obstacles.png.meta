@@ -95,7 +95,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: obstacles_Obstacles_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 69
+        width: 231
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75377b225bba78c46b73914e77311d38
+      internalID: 991893191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstacles_Obstacles_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 69
+        width: 231
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91e81a38900e2041aa36293f892ff9d
+      internalID: 822275453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obstacles_Obstacles_2
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 64
+        width: 231
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e767f6f933b16774f8e79836b810316e
+      internalID: 198902093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +169,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      obstacles_Obstacles_0: 822275453
+      obstacles_Obstacles_1: 991893191
+      obstacles_Obstacles_2: 198902093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
