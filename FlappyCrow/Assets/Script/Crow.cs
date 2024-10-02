@@ -20,8 +20,9 @@ public class Crow : MonoBehaviour
     {
         if (!isDead)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
+                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
 
             }
