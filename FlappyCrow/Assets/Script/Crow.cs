@@ -8,9 +8,21 @@ public class Crow : MonoBehaviour
     private string curretAnimation = "";
     private bool isAnimationFinished;
     private bool isDead = false;
+
+    private AudioSource audioS;
+
+
+    [SerializeField]
+    private AudioClip deadClip;
+    [SerializeField]
+    private AudioClip jumpClip;
+    [SerializeField]
+    private AudioClip passClip;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioS = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         ChangeAnimation("FlyCrow");
     }
@@ -24,20 +36,11 @@ public class Crow : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * 400);
+                audioS.clip = jumpClip;
+                audioS.Play();
 
             }
         }
-
-
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            ChangeAnimation("DieCrow");
-            Debug.Log("Holaa");
-
-        }
-
-
     }
 
     private void ChangeAnimation(string animation, float crossfade = 0.2f)
@@ -58,8 +61,20 @@ public class Crow : MonoBehaviour
         {
             ChangeAnimation("DieCrow");
             isDead = true;
+            if(isDead && !GameController.instance.isCrowDead)
+            {
+                audioS.clip = deadClip;
+                audioS.Play();
+            }
+            GameController.instance.isCrowDead = true;
 
+        }else if (collision.CompareTag("Pass"))
+        {
+            audioS.clip = passClip;
+            audioS.Play();
+            GameController.instance.AddPoint();
         }
+
     }
 
 }
